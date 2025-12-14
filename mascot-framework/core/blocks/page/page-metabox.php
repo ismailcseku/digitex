@@ -12,8 +12,8 @@ function digitex_page_metaboxes( $meta_boxes ) {
 	//list active sidebars
 	$active_sidebar_list = array();
 	$active_sidebar_list[ 'inherit' ] = esc_html__( 'Inherit from Theme Options', 'digitex' );
-	global $wp_registered_sidebars;
-	foreach ( $wp_registered_sidebars as $key => $value ) {
+	$registered_sidebars = digitex_get_registered_sidebars();
+	foreach ( $registered_sidebars as $key => $value ) {
 		$active_sidebar_list[ $key ] = $value['name'];
 	}
 

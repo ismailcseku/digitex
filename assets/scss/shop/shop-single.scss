@@ -616,7 +616,6 @@ body.single-product {
           color: var(--theme-color1);
         }
       }
-      .yith-wcwl-add-to-wishlist,
       .compare.button {
         vertical-align: middle;
         float: left;
@@ -648,35 +647,6 @@ body.single-product {
         }
         .blockUI {
           background-image: none !important;
-        }
-      }
-      .yith-wcwl-add-to-wishlist {
-        .add_to_wishlist,
-        .yith-wcwl-wishlistaddedbrowse,
-        .yith-wcwl-wishlistexistsbrowse {
-          &:before {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            line-height: 1;
-            vertical-align: middle;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 600;
-            content: "\f004";
-            color: var(--theme-color1);
-          }
-          &:after,
-          .blockUI {
-            display: none !important;
-          }
-        }
-        .yith-wcwl-wishlistaddedbrowse,
-        .yith-wcwl-wishlistexistsbrowse {
-          &:before {
-            content: "\f004";
-          }
         }
       }
       .compare.button::before {

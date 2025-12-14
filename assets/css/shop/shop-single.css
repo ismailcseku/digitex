@@ -549,7 +549,6 @@ body.single-product .main-content-area {
 .woocommerce div.product .summary .woosw-btn:hover {
   color: var(--theme-color1);
 }
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist,
 .woocommerce div.product .summary .compare.button {
   vertical-align: middle;
   float: left;
@@ -565,16 +564,13 @@ body.single-product .main-content-area {
   font-weight: normal;
   padding: 10px 0;
 }
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist:hover,
 .woocommerce div.product .summary .compare.button:hover {
   background: none;
 }
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist a,
 .woocommerce div.product .summary .compare.button a {
   color: var(--text-color);
   font-weight: normal;
 }
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist a:hover,
 .woocommerce div.product .summary .compare.button a:hover {
   text-decoration: underline;
 }
@@ -583,33 +579,6 @@ body.single-product .main-content-area {
 }
 .woocommerce div.product .summary .compare.button .blockUI {
   background-image: none !important;
-}
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse:before,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse:before {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  line-height: 1;
-  vertical-align: middle;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  content: "\f004";
-  color: var(--theme-color1);
-}
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:after,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .add_to_wishlist .blockUI,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse:after,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse .blockUI,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse:after,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse .blockUI {
-  display: none !important;
-}
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse:before,
-.woocommerce div.product .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse:before {
-  content: "\f004";
 }
 .woocommerce div.product .summary .compare.button::before {
   -webkit-font-smoothing: antialiased;

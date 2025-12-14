@@ -751,44 +751,6 @@ function digitex_product_item_added_signal_check() {
 }
 add_action('wp_enqueue_scripts', 'digitex_product_item_added_signal_check');
 
-/**
- * Disable scrolling on quick view enabled
- */
-if ( ! function_exists( 'digitex_yith_wcqv_customization_disable_scrolling' ) ) {
-	add_filter( 'wp_enqueue_scripts', 'digitex_yith_wcqv_customization_disable_scrolling', 999 );
-
-	function digitex_yith_wcqv_customization_disable_scrolling() {
-		$js = "( function( $ ){
-				var qv_modal    = $(document).find( '#yith-quick-view-modal' ),
-					qv_overlay  = qv_modal.find( '.yith-quick-view-overlay'),
-					qv_close    = qv_modal.find( '#yith-quick-view-close' ),
-					disableScrolling = function (){
-						$('html').css('overflow','hidden');
-					},
-					enableScrolling = function (){
-						$('html').css('overflow','');
-					}
-
-				$(document).on('qv_loader_stop', disableScrolling);
-
-				qv_overlay.on( 'click', function(e){
-					enableScrolling();
-				});
-
-				$(document).keyup(function(e){
-					if( e.keyCode === 27 )
-						enableScrolling();
-				});
-
-				qv_close.on( 'click', function(e) {
-					enableScrolling();
-				});
-        } )( jQuery );";
-
-		wp_add_inline_script( 'yith-wcqv-frontend', $js );
-	}
-}
-
 
 
 if (!function_exists('digitex_woocommerce_time_sale')) {

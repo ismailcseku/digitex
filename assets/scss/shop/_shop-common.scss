@@ -263,8 +263,7 @@ body.woocommerce {
 /* Sale Badge */
 .woocommerce {
   .tm-woo-product-item,
-  &.single-product,
-  #yith-quick-view-content {
+  &.single-product {
     .onsale {
       border-radius: 15px;
       background-size: 200% auto;

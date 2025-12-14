@@ -41,12 +41,6 @@ if ( ! function_exists( 'digitex_catalog_default_product_cat' ) ) {
 	}
 }
 
-
-//removed quick_view_button
-if (class_exists('YITH_WCQV_Frontend')):
-remove_action( 'woocommerce_after_shop_loop_item', array( YITH_WCQV_Frontend(), 'yith_add_quick_view_button' ), 15 );
-endif;
-
 //add before shop loop item
 add_action( 'woocommerce_before_shop_loop_item', 'digitex_catalog_default_before_shop_loop_item', 11 );
 if ( ! function_exists( 'digitex_catalog_default_before_shop_loop_item' ) ) {

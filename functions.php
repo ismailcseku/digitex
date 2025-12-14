@@ -180,13 +180,11 @@ if(!function_exists('digitex_action_wp_enqueue_scripts')) {
 			wp_enqueue_style( 'font-awesome-4-shim', DIGITEX_TEMPLATE_URI . '/assets/css/font-awesome-v4-shims.css' );
 			//linear icons
 			wp_enqueue_style( 'font-linear-icons', DIGITEX_TEMPLATE_URI . '/assets/fonts/linear-icons/style.css' );
-			//flaticon arrow
-			wp_enqueue_style( 'flaticon-arrow', DIGITEX_TEMPLATE_URI . '/assets/fonts/flaticon-arrow/style.css' );
+			//mascot arrow
+			wp_enqueue_style( 'mascot-arrow', DIGITEX_TEMPLATE_URI . '/assets/fonts/mascot-arrow/style.css' );
 
 			//gt walsheim pro Font
 			wp_enqueue_style( 'gt-walsheim-pro', DIGITEX_TEMPLATE_URI . '/assets/css/gt-walsheim-pro.css' );
-
-
 
 			//google fonts
 			wp_enqueue_style( 'digitex-google-fonts', digitex_google_fonts_url(), [], null );

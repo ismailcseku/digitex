@@ -577,6 +577,21 @@ if(!function_exists('digitex_remove_suffix')) {
 }
 
 
+if(!function_exists('digitex_get_registered_sidebars')) {
+	/**
+	 * Get registered sidebars
+	 * Wrapper function to access WordPress registered sidebars without using global keyword
+	 *
+	 * @return array Array of registered sidebars
+	 */
+	function digitex_get_registered_sidebars() {
+		if ( isset( $GLOBALS['wp_registered_sidebars'] ) && is_array( $GLOBALS['wp_registered_sidebars'] ) ) {
+			return $GLOBALS['wp_registered_sidebars'];
+		}
+		return array();
+	}
+}
+
 if(!function_exists('digitex_get_sidebar')) {
 	/**
 	 * Get Sidebar
@@ -1710,12 +1725,41 @@ if ( ! function_exists( 'digitex_tribe_events_frontend_scripts_responsive' ) ) {
 
 
 
+// Helper functions for nav search holder IDs
+if ( ! function_exists( 'digitex_add_nav_search_holder_id' ) ) {
+	/**
+	 * Add a nav search holder ID to the collection
+	 *
+	 * @param string $holder_id The holder ID to add
+	 */
+	function digitex_add_nav_search_holder_id( $holder_id ) {
+		if ( ! isset( $GLOBALS['digitex_nav_search_holder_ids'] ) || ! is_array( $GLOBALS['digitex_nav_search_holder_ids'] ) ) {
+			$GLOBALS['digitex_nav_search_holder_ids'] = array();
+		}
+		$GLOBALS['digitex_nav_search_holder_ids'][] = $holder_id;
+	}
+}
+
+if ( ! function_exists( 'digitex_get_nav_search_holder_ids' ) ) {
+	/**
+	 * Get all nav search holder IDs
+	 *
+	 * @return array Array of holder IDs
+	 */
+	function digitex_get_nav_search_holder_ids() {
+		if ( isset( $GLOBALS['digitex_nav_search_holder_ids'] ) && is_array( $GLOBALS['digitex_nav_search_holder_ids'] ) ) {
+			return $GLOBALS['digitex_nav_search_holder_ids'];
+		}
+		return array();
+	}
+}
+
 // header_nav_search_icon_popup_html
 if ( ! function_exists( 'digitex_header_nav_search_icon_popup_html' ) ) {
 	function digitex_header_nav_search_icon_popup_html() {
-		global $nav_search_holder_id;
-		if( isset($nav_search_holder_id) && is_array($nav_search_holder_id) ) {
-			foreach ($nav_search_holder_id as $holder_id) {
+		$nav_search_holder_ids = digitex_get_nav_search_holder_ids();
+		if( ! empty( $nav_search_holder_ids ) ) {
+			foreach ( $nav_search_holder_ids as $holder_id ) {
 	?>
 	<div id="<?php echo esc_attr($holder_id)?>" class="top-nav-search-form clearfix">
 		<div class="nav-search-inner">

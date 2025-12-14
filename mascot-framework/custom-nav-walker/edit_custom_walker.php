@@ -118,12 +118,16 @@ function digitex_add_megamenu_fields( $item_id, $item, $depth, $args ) {
 				<?php esc_html_e( 'Mega Menu Widget Area (Optional)', 'digitex' ); ?>
 				<select id="edit-menu-item-mascot-megamenu-widgetarea-<?php echo esc_attr( $item_id ); ?>" class="widefat code edit-menu-item-mascot-megamenu-widgetarea" name="menu-item-mascot-megamenu-widgetarea[<?php echo esc_attr( $item_id ); ?>]">
 					<option value="0"><?php esc_html_e( 'Select Widget Area', 'digitex' ); ?></option>
-					<?php global $wp_registered_sidebars; ?>
-					<?php if ( ! empty( $wp_registered_sidebars ) && is_array( $wp_registered_sidebars ) ) : ?>
-						<?php foreach ( $wp_registered_sidebars as $sidebar ) : ?>
+					<?php
+					$registered_sidebars = digitex_get_registered_sidebars();
+					if ( ! empty( $registered_sidebars ) ) :
+						foreach ( $registered_sidebars as $sidebar ) :
+					?>
 							<option value="<?php echo esc_attr( $sidebar['id'] ); ?>" <?php selected( $item->mascot_megamenu_widgetarea, $sidebar['id'] ); ?>><?php echo esc_html( $sidebar['name'] ); ?></option>
-						<?php endforeach; ?>
-					<?php endif; ?>
+					<?php
+						endforeach;
+					endif;
+					?>
 				</select>
 			</label>
 		</p>
