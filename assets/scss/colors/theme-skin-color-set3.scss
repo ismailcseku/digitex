@@ -5,20 +5,20 @@ $URL: https://themeforest.net/user/ThemeMascot
 ----------------------------------------- */
 $total-theme-colors: 4;
 
-$theme-color1: #f35353;
-$theme-color2: #343248;
-$theme-color3: #ff6e2f;
-$theme-color4: #87c03d;
+$theme-color1: #88ff2a;
+$theme-color2: #121419;
+$theme-color3: #D9F45F;
+$theme-color4: #BAFF39;
 
 @function hexToRGB($hex) {
   @return red($hex), green($hex), blue($hex);
 }
 
 // text color over theme color bg
-$theme-color1-text-color: #fff;
+$theme-color1-text-color: #0f0b19;
 $theme-color2-text-color: #fff;
-$theme-color3-text-color: #fff;
-$theme-color4-text-color: #fff;
+$theme-color3-text-color: #0f0b19;
+$theme-color4-text-color: #0f0b19;
 
 //lighter darker
 $theme-color1-lighter: lighten($theme-color1, 11%);
