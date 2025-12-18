@@ -183,8 +183,8 @@ if(!function_exists('digitex_action_wp_enqueue_scripts')) {
 			//mascot arrow
 			wp_enqueue_style( 'mascot-arrow', DIGITEX_TEMPLATE_URI . '/assets/fonts/mascot-arrow/style.css' );
 
-			//gt walsheim pro Font
-			wp_enqueue_style( 'gt-walsheim-pro', DIGITEX_TEMPLATE_URI . '/assets/css/gt-walsheim-pro.css' );
+			//Creato Display Font
+			wp_enqueue_style( 'creato-display', DIGITEX_TEMPLATE_URI . '/assets/css/creato-display.css' );
 
 			//google fonts
 			wp_enqueue_style( 'digitex-google-fonts', digitex_google_fonts_url(), [], null );
