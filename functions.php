@@ -445,7 +445,8 @@ if(!function_exists('digitex_primary_google_fonts')) {
 			$fonts_container = array('fonts' => &$fonts);
 			get_template_part( 'assets/scss/typography-php/'.$fileName, null, $fonts_container );
 		} else {
-				$fonts[] = 'Urbanist:ital,wght@0,100..900;1,100..900';
+				$fonts[] = 'Manrope:wght@200..800&display=swap';
+				$fonts[] = 'Playfair+Display:wght@400..900&display=swap';
 		}
 		return $fonts;
 	}
